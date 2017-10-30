@@ -15,3 +15,4 @@ req.onreadystatechange = function() {
 } 
 req.open('GET',res, true); 
 req.send();
+ 
