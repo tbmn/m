@@ -1,4 +1,4 @@
-var res = 'http://www.starwoodhotels.com/'; 
+var res = 'https://www.starwoodhotels.com/'; 
 var req = new XMLHttpRequest(); 
 req.onreadystatechange = function() { 
   console.log(req.readyState); 
