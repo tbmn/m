@@ -1,6 +1,4 @@
-function allStorage() {
-
-    var archive = {}, // Notice change here
+    var archive = {}, 
         keys = Object.keys(localStorage),
         i = keys.length;
 
@@ -9,4 +7,3 @@ function allStorage() {
     }
 
     prompt(archive);
-}
