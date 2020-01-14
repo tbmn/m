@@ -1,12 +1,12 @@
 function allStorage() {
 
-    var values = [],
+    var archive = [],
         keys = Object.keys(localStorage),
-        i = keys.length;
+        i = 0, key;
 
-    while ( i-- ) {
-        values.push( localStorage.getItem(keys[i]) );
+    for (; key = keys[i]; i++) {
+        archive.push( key + '=' + localStorage.getItem(key));
     }
 
-    return values;
+    return archive;
 }
