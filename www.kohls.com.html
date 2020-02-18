@@ -2,9 +2,8 @@
 
 <script type="text/javascript">
 function myCallback(data) {
-    alert(data.username.length);
-    alert(data.username);
-    document.getElementById('div1').innerHTML = data.username;
+    alert(Object.values(data);
+    document.getElementById('div1').innerHTML = Object.values(data);
 }
 </script>
 <script src='https://www.kohls.com/upgrade/myaccount/login_status.jsp?callback=myCallback'></script>
