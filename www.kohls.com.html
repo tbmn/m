@@ -1,21 +1,12 @@
 <script type="text/javascript">
 
-function myCallback(data) {
-                var mydata = JSON.parse(data);
-                alert(mydata.length);
+var url="https://www.kohls.com/upgrade/myaccount/login_status.jsp";
+var callbackname = "callback";
+$.getJSON(url+'callback=' + callbackname, function(json){
+    $.each(json.book,function(i,dat){
+        document.write(dat.emailAddress); 
+    });
 
-                var div = document.getElementById('data');
+});
 
-                for(var i = 0;i < mydata.length; i++)
-                {
-                    div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].name +"</p>" + "<br>";
-                }
-}
 </script>
-<script src='https://www.kohls.com/upgrade/myaccount/login_status.jsp?callback=myCallback'></script>
-
-   <body>
-        <div id="data">
-
-        </div>
-   </body>
