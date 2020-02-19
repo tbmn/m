@@ -1,0 +1,9 @@
+<div id='div1'>data</div>
+
+<script type="text/javascript">
+function myCallback(data) {
+    document.getElementById('div1').innerHTML = Object.values(data);
+}
+</script>
+<script src='https://www.kohls.com/myaccount/json/myinfo/customer_saleAlerts_details_json.jsp?callback='></script>
+
